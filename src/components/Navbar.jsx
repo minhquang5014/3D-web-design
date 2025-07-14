@@ -6,14 +6,14 @@ import { navLinks } from '../constants';
 import { logo, menu, close, creator } from '../assets/';
 
 const Navbar = () => {   // define a function component
-  const [active, setActive] = useState('')  // React state management, using a hook
-
+  const [active, setActive] = useState('');  // React state management, using a hook
+  const [toggle, setToggle] = useState(false);
   return (
     <nav 
-      className={`${styles.paddindX}`}  // Special utilities class we have created
-      w-full flex items-center py-5 fixed top-0 z-20 bg-primary
+      className={`${styles.paddingX}  
+      w-full flex items-center py-5 fixed top-0 z-20 bg-primary `} // Special utilities class we have created
     >
-      <div className='w-full flex justify-between items-center max-w-7x1 mx-auto'>
+      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link 
           to="/" 
           className='flex items-center gap-2'
@@ -23,14 +23,48 @@ const Navbar = () => {   // define a function component
           }}>
           
           <img src={creator} alt="logo" className='w-9 h-9 object-contain' />
-          <p className="text-white text-{18px} font-bold cursor-pointer">
-            Tommy <span className='sm:block hidden'>   
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Tommy &nbsp;<span className='sm:block hidden'>   
               | Software engineer
             </span>
           </p>
         
         </Link>
-
+        <ul className='list-none hidden sm:flex flex-row gap-10'>
+          {navLinks.map((Link) => (
+            <li key={Link.id} className={`${
+              active===Link.title
+                 ? "text-white"
+                 : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer`}
+            onClick={() => setActive(Link.title)}
+            >
+              <a href={`#${Link.id}`}>{Link.title}</a>
+            </li>
+          ))}
+        </ul>
+        <div className='sm:hidden flex flex-1 justify-end items-center'>
+          <img src={toggle ? close : menu}
+          alt="menu"
+          className='w-[28px] h-[28px] object-contain cursor-pointer'
+          onClick={() => setToggle(!toggle)}
+          />
+          <div className={`${!toggle ? 'hidden' : 'flex' } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+            <ul className='list-none flex justify-end items-center flex-col gap-4'>
+          {navLinks.map((Link) => (
+            <li key={Link.id} className={`${
+              active===Link.title
+                 ? "text-white"
+                 : "text-secondary"
+            } font-poppins font-medium cursor-pointer text-[16px]`}
+            onClick={() => {setToggle(!toggle); setActive(Link.title);}}
+            >
+              <a href={`#${Link.id}`}>{Link.title}</a>
+            </li>
+          ))}
+        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   )
