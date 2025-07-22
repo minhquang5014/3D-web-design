@@ -28,13 +28,13 @@ const ServiceCard = ({ index, title, icon }) =>{
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div id='about' variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>  
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
       <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia suscipit nemo nulla eius qui, modi exercitationem iusto natus quas ipsa aspernatur blanditiis quia nesciunt velit omnis enim dolor at reiciendis.
+        Welcome to the website. My name is Tran Minh Quang (Tommy Tran). These are three main areas that I specialize in: Web development, Desktop App development, ML model training, embedded system development and more. Follow along for more cool projects. I am looking forward to working with you.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

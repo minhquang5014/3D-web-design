@@ -23,9 +23,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    emailjs.send('service_7ms3rnc', 'template_a9wxhp8', 
+    emailjs.send(service_key, template_key, 
               {from_name: form.name, to_name: 'Tommy', from_email: form.email, to_email:'tranquang5014@gmail.com', message:form.message},
-              's1ZGUTRfRlBLjQyZQ')
+              public_key)
               .then(() => {
                 setLoading(false);
                 alert('Thank you. I will get back to you soon');
@@ -42,7 +42,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <div id='contact' className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div variants={slideIn("left", 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
         <p className={styles.sectionSubText}>Get in touch</p>
