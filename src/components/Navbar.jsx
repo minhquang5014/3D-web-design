@@ -5,7 +5,7 @@ import { styles } from '../styles/';
 import { navLinks } from '../constants';
 import { logo, menu, close, creator } from '../assets/';
 
-const Navbar = () => {   // define a function component
+const Navbar = () => {   
   const [active, setActive] = useState('');  // React state management, using a hook
   const [toggle, setToggle] = useState(false);
   return (
@@ -28,7 +28,6 @@ const Navbar = () => {   // define a function component
               | Software engineer
             </span>
           </p>
-        
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((Link) => (
@@ -51,18 +50,18 @@ const Navbar = () => {   // define a function component
           />
           <div className={`${!toggle ? 'hidden' : 'flex' } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
             <ul className='list-none flex justify-end items-center flex-col gap-4'>
-          {navLinks.map((Link) => (
-            <li key={Link.id} className={`${
-              active===Link.title
-                 ? "text-white"
-                 : "text-secondary"
-            } font-poppins font-medium cursor-pointer text-[16px]`}
-            onClick={() => {setToggle(!toggle); setActive(Link.title);}}
-            >
-              <a href={`#${Link.id}`}>{Link.title}</a>
-            </li>
-          ))}
-        </ul>
+              {navLinks.map((Link) => (
+                <li key={Link.id} className={`${
+                  active===Link.title
+                    ? "text-white"
+                    : "text-secondary"
+                } font-poppins font-medium cursor-pointer text-[16px]`}
+                onClick={() => {setToggle(!toggle); setActive(Link.title);}}
+                >
+                  <a href={`#${Link.id}`}>{Link.title}</a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
