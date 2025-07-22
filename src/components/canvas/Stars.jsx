@@ -6,8 +6,8 @@ import * as random from 'maath/random'
 const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => {
-    const positions = new Float32Array(10000);
-    random.inSphere(positions, { radius: 1.2 });
+    const position_sphere = new Float32Array(10000);
+    return random.inSphere(position_sphere, { radius: 1.2 });
   });
   
   useFrame((state, delta) => {
