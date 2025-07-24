@@ -13,19 +13,25 @@ const Contact = () => {
     name: '',
     email: '',
     message: '',
-  })
+  });
   const [loading, setLoading] = useState(false);
   const handleChange  = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
     setForm({...form, [name]: value})
-  }
+  };
+  // const service_key = import.meta.env.SERVICE_ID;
+  // const template_key = import.meta.env.TEMPLATE_ID;
+  // const public_key = import.meta.env.EMAILJS_PLUBLIC_ID;
+  // const email_addr = import.meta.env.EMAIL_ADDRESS;
+  // console.log(service_key, template_key, email_addr);
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    emailjs.send(service_key, template_key, 
-              {from_name: form.name, to_name: 'Tommy', from_email: form.email, to_email:'tranquang5014@gmail.com', message:form.message},
-              public_key)
+    emailjs.send(import.meta.env.VITE_SERVICE_ID, 
+              import.meta.env.VITE_TEMPLATE_ID, 
+              {from_name: form.name, to_name: 'Tommy', from_email: form.email, to_email: import.meta.env.VITE_EMAIL_ADDRESS, message:form.message},
+              import.meta.env.VITE_EMAILJS_PLUBLIC_ID)
               .then(() => {
                 setLoading(false);
                 alert('Thank you. I will get back to you soon');

@@ -9,7 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState('');  // React state management, using a hook
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
