@@ -215,7 +215,7 @@ const projects = [
       },
     ],
     image: GUI_app,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/minhquang5014/graduation-thesis",
   },
   {
     name: "Bit Buddy academy",
