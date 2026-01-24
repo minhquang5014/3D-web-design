@@ -67,6 +67,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import { social_media } from '../constants'
+import { personal_avatar } from '../assets/index';
 
 const Hero = () => {
   return (
@@ -123,7 +124,7 @@ const Hero = () => {
         >
           <div className="w-full h-full sm:w-[80%] sm:h-[80%] rounded-2xl overflow-hidden border border-black/20">
             <img
-              src="./src/assets/personal_avatar.jpg"
+              src= {personal_avatar}
               className="w-full h-full object-cover"
               alt="Profile"
             />
