@@ -31,6 +31,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import GUI_app from "./GUI_app.png";
 import bit_buddy from "./bit-buddy.png";
+import computer_vision from "./computer_vision.jpg";
 
 export {
   logo,
@@ -62,5 +63,6 @@ export {
   jobit,
   tripguide,
   GUI_app,
-  bit_buddy
+  bit_buddy,
+  computer_vision
 };
