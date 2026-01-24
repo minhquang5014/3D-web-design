@@ -241,7 +241,7 @@ const projects = [
   {
     name: "Computer Vision Project",
     description:
-      "ML projects for developing Computer Vision, including facial recognition, YOLO algorithms, camera calibration, etc",
+      "ML projects for developing Computer Vision, including facial recognition, YOLO algorithms for object detection, camera calibration, Hand detection, etc",
     tags: [
       {
         name: "python",
