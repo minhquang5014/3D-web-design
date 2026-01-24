@@ -29,6 +29,8 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import GUI_app from "./GUI_app.png";
+import bit_buddy from "./bit-buddy.png";
 
 export {
   logo,
@@ -59,4 +61,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  GUI_app,
+  bit_buddy
 };

@@ -19,7 +19,7 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <primitive object={computer.scene}
-        scale={isMobile ? 0.75 : 0.7}
+        scale={isMobile ? 1.5 : 1.35}
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
@@ -78,7 +78,7 @@ const ComputersCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         />
-        <Cars isMobile={isMobile}/>
+        <Computers isMobile={isMobile}/>
       </Suspense>
 
       <Preload all />

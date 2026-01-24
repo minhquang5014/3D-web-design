@@ -23,6 +23,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  GUI_app,
+  bit_buddy,
 } from "../assets";
 
 export const navLinks = [
@@ -46,15 +48,15 @@ const services = [
     icon: web,
   },
   {
-    title: "ML developer",
+    title: "ML Developer",
     icon: mobile,
   },
   {
-    title: "Embedded system developer",
+    title: "Embedded System Developer",
     icon: backend,
   },
   {
-    title: "Backend developer",
+    title: "Mobile App Developer",
     icon: creator,
   },
 ];
@@ -80,10 +82,10 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -92,10 +94,10 @@ const technologies = [
     name: "Node JS",
     icon: nodejs,
   },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "Three JS",
     icon: threejs,
@@ -104,14 +106,14 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
@@ -211,7 +213,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: carrent,
+    image: GUI_app,
     source_code_link: "https://github.com/",
   },
   {
@@ -232,30 +234,58 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: bit_buddy,
+    source_code_link: "https://github.com/minhquang5014/bit-buddy-academy",
   },
-  {
-    name: "Personal Web App",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "Personal Web App",
+  //   description:
+  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: tripguide,
+  //   source_code_link: "https://github.com/",
+  // },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const social_media = [
+  {
+    platform: "facebook",
+    link: "https://www.facebook.com/tran.minh.quang.437443",
+    icon: 'bx bxl-facebook-circle',
+  },
+  {
+    platform: "instagram",
+    link: "https://www.instagram.com/minhquang5014/",
+    icon: 'bx bxl-instagram',
+  },
+  {
+    platform: "github",
+    link: "https://github.com/minhquang5014",
+    icon: 'bx bxl-github',
+  },
+  {
+    platform: "upwork",
+    link: 'https://www.upwork.com/freelancers/~0140fb1e7f8fccd0a6',
+    icon: 'bx bxl-upwork'
+  },
+  {
+    platform: "linkedin",
+    link: 'https://www.linkedin.com/in/tr%E1%BA%A7n-minh-quang-579065232/',
+    icon: 'bx bxl-linkedin'
+  }
+]
+
+export { services, technologies, experiences, testimonials, projects, social_media };
