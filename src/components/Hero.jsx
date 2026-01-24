@@ -123,7 +123,7 @@ const Hero = () => {
         >
           <div className="w-full h-full sm:w-[80%] sm:h-[80%] rounded-2xl overflow-hidden border border-black/20">
             <img
-              src="./src/assets/avatar.jpg"
+              src="./src/assets/personal_avatar.jpg"
               className="w-full h-full object-cover"
               alt="Profile"
             />

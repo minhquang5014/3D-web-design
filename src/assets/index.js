@@ -32,6 +32,7 @@ import tripguide from "./tripguide.png";
 import GUI_app from "./GUI_app.png";
 import bit_buddy from "./bit-buddy.png";
 import computer_vision from "./computer_vision.jpg";
+import personal_avatar from "./personal_avatar.jpg";
 
 export {
   logo,
@@ -64,5 +65,6 @@ export {
   tripguide,
   GUI_app,
   bit_buddy,
-  computer_vision
+  computer_vision,
+  personal_avatar
 };
