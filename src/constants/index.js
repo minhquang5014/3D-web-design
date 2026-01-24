@@ -25,6 +25,7 @@ import {
   threejs,
   GUI_app,
   bit_buddy,
+  computer_vision
 } from "../assets";
 
 export const navLinks = [
